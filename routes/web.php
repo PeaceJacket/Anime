@@ -19,3 +19,7 @@ Route::resource('admin-list-anime', 'App\Http\Controllers\AnimeController');
 Route::resource('admin-list-peliculas', 'App\Http\Controllers\PeliculasController');
 Route::resource('admin-capitulos-anime', 'App\Http\Controllers\CapitulosAnimeController');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
